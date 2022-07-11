@@ -1,0 +1,57 @@
+# INTRODUÇÃO AO GIT E AO GITHUB 
+
+- Link para download do Git: https://git-scm.com/downloads
+- Git possui interface CLI (Command-line Interface)
+- Principais comandos básicos de terminal para Windows: 
+
+cd: change directory - utilizado para navegar entre os diretórios;
+dir: directory - lista os diretórios contidos no diretório em que você se encontra
+mkdir: make directory - utilizado para criar um novo diretório
+del: delete - utilizado para deletar um ou mais arquivos
+rmdir: remove directory - remove todo o diretório em questão
+cls: utilizado para limpar a tela do terminal; atalho: ctrl + L
+
+- Principais comandos básicos de terminal para Unix: 
+
+cd: change directory - utilizado para navegar entre os diretórios;
+ls: list - lista as pastas/arquivos contidos no diretório em que você se encontra
+ls -a: lista arquivos ocultos do diretório em que você se encontra
+mkdir: make directory - utilizado para criar um novo diretório
+rm -rf: utilizado para forçar a remoção de um diretório por completo
+clear: utilizado para limpar a tela do terminal; atalho: ctrl + L
+mv: move arquivo para o diretório especificado 
+
+- SHA1: algoritmo de encriptação = Secure Bash Algorithm 
+- Objetos do Git: 
+
+Blobs: contém arquivos juntamente com seus metadados (tipo, tamanho, etc)
+Trees: apontam para blobs; contém informações sobre os metadados + nome do arquivo + SHA1 dos metadados
+Commits: apontam para árvores; contém informações sobre os metadados + nome do autor + mensagem + timestamp (data/hora) + parent + SHA1 dos metadados
+
+- Chave SSH: dois tipos - pública e privada; define a assinatura da máquina; não há a necessidade de colocar uma senha
+- Como gerar uma chave SSH: https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+- Primeiros comandos com o Git:
+
+git init
+git config --list
+git config --global user.email "EMAIL"
+git config --global --unset user.email "EMAIL"
+git config --global user.name "NOME/APELIDO"
+git status
+git add NOME_ARQUIVO/*/.
+git commit -m "MENSAGEM"
+git remote -v
+git remote add ALIAS_DO_ENDERECO "MENSAGEM"
+git push ALIAS BRANCH
+git clone LINK
+
+- Status das modificações: 
+Untracked
+Unmodified
+Modified
+Staged
+
+
+
+
+
