@@ -1,0 +1,87 @@
+# Dominando IDEs Java
+
+- Fases da execução Java: 
+
+JDK (Java Development Kit): responsável pela compilação em bytecode
+JRE (Java Runtime Environment): ambiente de execução do Java que fornece as bibliotecas padrões para o JDK e a JVM 
+JVM (Java Virtual Machine): responsável por executar o bytecode
+
+1. Código-fonte é gerado e arquivo é salvo com extensão .java 
+2. Através da JDK, o arquivo .java é compilado gerando um arquivo com extensão .class (arquivo bytecode)
+3. A JVM interpreta o arquivo compilado e as bibliotecas que estão no JRE
+
+- Versões Java:
+
+OpenJDK: open-source (gratuita)
+JDK Oracle: pertence à Oracle, requer licensa (paga)
+
+- IDE = ambiente de desenvolvimento integrado - permite desenvolvimento com uma interface gráfica (GUI). Exemplos para Java: IntelliJ, Eclipse, NetBeans, VS Code etc
+
+- Link para download do Eclipse: https://www.eclipse.org/downloads/
+- Link para download do IntelliJ: https://www.jetbrains.com/idea/download/
+- Link para download da OpenJDK Azul Zulu: https://www.azul.com/downloads/?package=jdk#download-openjdk
+- Link para o repositório da Camila Cavalcante (professora deste curso): https://github.com/cami-la/curso-dio-dominando-ides-java
+
+=> IDE: ECLIPSE
+
+Atalhos:
+
+- ctrl + 3 = abre a aba de pesquisa para seleção de perspectiva java
+- ctrl + n = abre a aba para selecionar o wizard - criação de um novo projeto, nova classe, etc
+- main + ctrl + espaço = atalho para criação do public static void main
+- sysout + ctrl + espaço = atalho para criação do System.out.println()
+- ctrl + s = salva o arquivo
+- botão direito -> run as -> java application: comando utilizado para rodar o programa 
+- selecionar pacote + F2 = muda o nome do pacote selecionado
+- ctrl + m = minimiza e maximiza o package explorer
+- ctrl + 3 + parte da palavra reservada = utilizado para criar um construtor, getters and setters, equals/hashcode
+- ctrl + d = apaga a linha atual
+- alt + seta para cima ou para baixo (com o bloco de texto selecionado) = move o bloco de texto para cima ou para baixo no código
+- ctrl + shift + f = faz a identação do código
+- ctrl + shift + o = importa o pacote que está faltando
+- ctrl + alt + seta para baixo ou para cima = duplica bloco de texto selecionado
+- ctrl + 1 = utilizado para definir variável local para o retorno de um método, por exemplo
+- ctrl + shift + t = usado para pesquisar uma classe
+- ctrl + w = fecha a aba aberta 
+- ctrl + shift + w = fecha todas as abas abertas dentro da IDE
+- ctrl + shift + c + texto selecionado = comenta bloco
+
+
+=> IDE: INTELLIJ
+
+Atalhos:
+
+- alt + insert + pacote selecionado = abre menu para criação de classes, pacotes, etc
+- main + enter = cria método main
+- psvm + enter = cria método main
+- sout + enter = cria System.out.println()
+- ctrl + shift + F10 = executa o programa
+- shift + F10 = executa o programa sem precisar configurar
+- alt + insert = cria construtor, getters e setters, equals e hashcode, toString, etc
+- shift + seta para cima ou para baixo = usado para selecionar um ou mais atributos na hora de criar construtores, getters e setters, etc
+- ctrl + shift + / + texto selecionado = comenta e descomenta o bloco selecionado
+- ctrl + / + texto selecionado = comenta bloco selecionado, porém linha a linha
+- alt + enter = faz o import da classe que está faltando
+- ctrl + alt + o = limpa os importa que não estão sendo utilizados
+- ctrl + y = deleta linha
+- shift + F6 = renomeia
+- shift + F12 = mostra somente a parte do editor de texto
+- ctrl + alt + l = faz a identação do código
+- ctrl + d = duplica uma linha
+- ctrl + shift + seta para cima ou para baixo = move o bloco de texto selecionado para cima ou para baixo
+- alt + enter = cria variável local
+- ctrl + alt + v = extrai uma variável
+- ctrl + F4 = fecha aba aberta da IDE
+- ctrl + n = usado para pesquisar classes/pacotes
+- ctrl + b = usado para navegar para a classe selecionada
+- shift + F12 = expande o editor de tela, minimizando a aba de projetos
+- alt + 1 = maximiza a aba de projetos
+
+- Link para todos os atalhos do IntelliJ no Windows, Linux ou MacOS: https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
+
+- Plugins interessantes para IntelliJ: Rainbow Brackets, Key Promoter X, Ryan Progress Bar, GitToolBox
+
+=> IDE: VS Code
+
+- Plugin interessante: Github Theme
+
