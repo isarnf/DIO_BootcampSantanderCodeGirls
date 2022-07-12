@@ -1,0 +1,48 @@
+# VARIÁVEIS, TIPOS DE DADOS E OPERADORES MATEMÁTICOS EM JAVA
+
+- variável: "um espaço de memória do computador onde se pode guardar valores."
+- 4 tipos em java: instância, classe, local e parâmetros
+- criação de váriáveis pode conter: 
+
+visibilidade: opcional; public, protected, private
+modificador: opcional; static, final
+tipo: obrigatorio
+nome: obrigatorio 
+valor inicial: opcional
+
+- Boas práticas para construção de variáveis: camel case, nomes claros e sugestivos para as suas respectivas funções, inicio com letra minúscula, não possuir caracteres especiais e espaços, constantes devem ser escritas em letras maiúsculas e separadas por underline etc
+
+- tipificação de dados
+
+estática: é obrigatório a definição do tipo de variável no momento da criação
+dinâmica: não é obrigatório a definição do tipo de variável no momento da criação
+primitivo: tipos de dados mais básicos, homogêneos
+composto: structs, objetos, strings etc, heterogêneos
+ 
+- tipos "long" precisam de um caractere "L" ao final
+- tipos "float precisam de um caractere "F" ao final
+
+- operadores:
+
+pós-fixado
+prefixado
+aritmético
+atribuição
+
+
+- precedência:  exp++,  exp--, ++exp, --exp, *, /, %, +, -, =, +=, -=, *=, /=, %=
+
+- casting (conversão):
+
+upcast: promoção de um tipo de dado para um tipo de maior capacidade (implícito)
+downcast: rebaixamento de um tipo de dado para um tipo de menor capacidade (explícito)
+
+
+
+
+
+
+
+
+
+
