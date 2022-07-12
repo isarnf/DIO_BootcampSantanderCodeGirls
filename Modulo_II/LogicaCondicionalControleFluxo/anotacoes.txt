@@ -1,0 +1,42 @@
+# LÓGICA CONDICIONAL E CONTROLE DE FLUXOS EM JAVA
+
+- operadores relacionais: utilizados para realizar comparações entre determinados operandos 
+
+Tipos:
+
+similaridade (igualdade ou diferença): ==, !=
+tamanho (maior, maior igual, menor, menor igual): >, >=, <, <=
+
+- operadores lógicos: utilizados para realizar comparações lógicas entre operandos lógicos ou expressões
+
+Tipos:
+
+conjunção (&& / AND / e): operação que só é verdadeira quando ambos operandos/expressões são verdadeiros
+disjunção (|| / OR / ou): operação que só é falsa quando ambos operandos/expressões são falsas
+disjunção exclusiva (^ / XOR): operação que só é verdadeira quando ambos operandos/expressões são opostos
+negação (! / NOT): operação que inverte o valor lógico de um operando/expressão
+
+- operadores bitwise (& e |) e operadores shift (˜, >>, >>>, <<): não são operadores lógicos
+
+- boas práticas: criar variáveis intermediárias para resultados intermediários
+
+- estruturas de controle de fluxo: possuem a capacidade de direcionar o fluxo de execução de um código
+
+Tipos:
+
+decisão: avalia uma condição booleana ou variável => if, if - else, if - else if, if - else if - else, switch (recomendado para para valores exatos) e operador ternário (condição ? true : false)
+repetição: for, while, do-while
+interrupção: break, continue e return
+
+- blocos: grupo de 0 ou mais códigos para executar uma operação; exemplo: if
+
+Tipos:
+
+locais: dentro de métodos
+estáticos: dentro de classes
+instância: dentro de classes
+
+
+
+
+
