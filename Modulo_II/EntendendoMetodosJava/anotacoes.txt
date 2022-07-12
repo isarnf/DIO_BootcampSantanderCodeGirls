@@ -1,0 +1,26 @@
+# ENTENDENDO MÉTODOS
+
+- Definição: é uma sub-rotina de uma classe que executa um comportamento específico quando é requisitado
+
+- padrão de criação de um método:
+
+visibilidade: opcional; public, protected ou private
+tipo: opcional; concreto ou abstrato
+modificador: opcional; static ou final
+retorno: obrigatório; tipo de dado ou void
+nome: obrigatório
+parâmetros: opcional
+exceções: opcional
+corpo: obrigatório
+
+- assinatura: forma de identificar unicamente um método (nome + parâmetros)
+- construtor e destrutor: métodos especiais da orientação a objetos
+- mensagem: solicitações de execução de métodos por uma classe ou objeto
+- passagem de parâmetros: por valor (cópia) ou referências (endereço)
+- boas práticas: nomes descritivos, curtos, visibilidade adequada, preferência a verbos, camel case, evitar muitos parâmetros
+
+- sobrecarga: preservação do nome de um método, mas com comportamentos diferentes devido à diferenças nos tipos e quantidade de parâmetros, ou seja, alteração na assinatura do método
+
+- retorno: instrução de interrupção; deve ser compatível com o tipo de retorno definido inicialmente; 
+
+- um método void pode possuir retorno, porém sem um tipo de dado específico, apenas para interromper o fluxo de execução 
