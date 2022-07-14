@@ -1,0 +1,12 @@
+# ESTRUTURAS DE REPETIÇÃO E ARRAYS EM JAVA
+
+- estrutura de repetição: permite que sequência de comandos seja executada repetidamente caso determinadas condições sejam satisfeitas (expressões lógicas)
+
+while: verifica condição no início
+do-while: executa o laço pelo menos uma vez e verifica condição no final
+for: repetição contada
+break: termina um laço de repetição de forma abrupta
+continue: os comandos da repetição atual após o continue são ignorados e o programa volta a verificar a condição novamente para ver se é satisfeita
+
+- array: estrutura utilizada para armazenar dados do mesmo tipo de forma sequencial; possuem tamanho fixo; podem ser unidimensionais e multidimensionais (por exemplo matrizes); index (posição) inicial é sempre zero
+
