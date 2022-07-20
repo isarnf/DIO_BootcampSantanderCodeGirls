@@ -1,0 +1,128 @@
+# COLLECTIONS
+
+- são objetos que agrupam múltiplos elementos (Variáveis primitivas ou objetos) dentro de uma única unidade; servem para armazenar e processar conjuntos de dados de forma eficiente
+
+- composição das collections: interfaces, implementações e algoritmos
+
+
+Collection - Interface List - Implementações ArrayList, LinkedList, Vector
+Collection - Interface Set - Implementações HashSet, LinkedHashSet, TreeSet
+Collection - Interface Map - Implementações HashMap, LinkedHashMap, TreeMap, Hashtable
+(Implementações Vector e Hashtable são thread safe
+
+Object - Array, Collections 
+
+## LIST
+
+- fica dentro do pacote java.util
+- estende da interface Collection
+- caracteristicas: permite elementos duplicados e garante ordem de inserção
+
+Vector: é thread safe
+Arraylist: só implementa list; usada principalmente para operações de pesquisa (recuperação de dados); utiliza arrays
+LinkedList: implementa List e Queue; usada principalmente para operações de inserção e exclusão (manipulação de dados); utiliza listas duplamente encadeadas
+
+
+- Formas de inicialização de lista:
+
+List notas = new ArrayList(); - antes do java 5
+* List<Double> notas = new ArrayList<>(); - a partir do java 5, com generics
+ArrayList<Double> notas = new ArrayList<>(); - não é recomendado
+List<Double> notas = new ArrayList<>(Arrays.asList(7d, 8.5, 9.3));
+List<Double> notas = Arrays.asList(7d, 8.5, 9.3); - limitada, pois não é possível adicionar ou remover elementos
+List<Double> notas = List.of(7d, 8.5, 9.3); - também torna a lista imutável, pois não é possível adicionar ou remover elementos 
+
+- Principais métodos:
+
+- lista.add(elemento) = adiciona elemento na lista
+- lista.indexOf(objeto) = retorna a posição do elemento
+- lista.add(posicao, elemento) = adiciona elemento na posicao especificada
+- lista.set(posicao, elemento) = substitui elemento na posicao especificada
+- lista.contains(elemento) = mostra se elemento está na lista; retorna true ou false;
+- lista.get(posicao) = retorna o elemento localizado na posição especificada
+- Collections.min(lista) = retorna o menor valor (utiliza a interface Comparable)
+- Collections.max(lista) = retorna o menor valor (utiliza a interface Comparable)
+- iterator = usado para iterar sobre uma lista, para fazer a soma de elementos, por exemplo, ou para checar alguma condição. Possui os métodos hasNext(), next(), remove()
+- lista.size() = retorna a quantidade de elementos presentes na lista
+- lista.remove(elemento) = remove o elemento especificado
+- lista.remove(posicao) = remove o elemento da posição especificada
+- lista.clear() = apaga toda a lista
+- lista.isEmpty() = verifica se a lista está vazia; retorna true ou false
+
+
+- Ordenação de listas:
+
+- Collections.shuffle(lista) = embaralha a lista em ordem aleatória
+- método compareTo = sobrescrito quando interface Comparable é implementada; retorna um inteiro (-1, quando o objeto comparado é menor; 0 quando os objetos são iguais e 1 quando o objeto comparado é maior); obs: quando os elementos comparados forem strings, será considerado a ordem alfabética
+- Collections.sort(lista) = organiza a lista de acordo com o método compareTo implementado pela interface Comparable
+- método compare = sobrescrito quando interface Comparator é implementada; retorna um inteiro (-1, quando o objeto comparado é menor; 0 quando os objetos são iguais e 1 quando o objeto comparado é maior); obs: quando os elementos comparados forem strings, será considerado a ordem alfabética
+- método compareToIgnoreCase = usado para comparar lexicograficamente ignorando diferenças entre maiúsculas e minúsculas
+
+
+## SET (coleção com singularidade)
+
+- também pertence ao pacote java.util
+- estende da interface Collection
+- características: não permite elementos duplicados e não possui índice 
+
+HashSet: utiliza a implementação HashMap; não mantém a ordem dos elementos; possui melhor performance; permite no máximo um elemento nulo
+LinkedHashSet: utiliza implementação LinkedHashMap; mantém a ordem de inserção dos elementos; performance intermediária; permite no máximo um elemento nulo
+TreeSet: utiliza implementação TreeMap; mantém a ordem natural dos elementos; pior performance; não permite elementos nulos
+
+- os métodos de set são semelhantes aos de list, com exceção de alguns que utilizam o índice do elemento, já que sets não possuem índice. Portanto, métodos como o set(), get(), indexOf(), por exemplo, não funcionam nesse caso
+
+## MAP (coleção de pares)
+
+- também pertence ao pacote java.util
+- NÃO estende da interface Collection
+- características: composto por um conjuntos chave-valor, nos quais as chaves são únicas e os valores podem se repetir
+
+Hashtable: thread safe;
+HashMap: itera elementos aleatoriamente; permite chaves nulas; utiliza list of buckets;
+LinkedHashMap: itera de acordo com a ordem de inserção; permite chaves nulas; utiliza doubly linked list of buckets
+TreeMap: muito utilizado na parte de ordenação; itera de acordo com a ordem natural dos elementos; não permite chaves nulas; utiliza red-black trees
+
+OBS: 
+Métodos: get, ut, containsKey and remove
+HashMap e LinkedHashMap - Big O notation = O(1) = mesma performance
+TreeMap - Big O notation = O(log n) = performance um pouco pior
+
+
+- principais métodos:
+
+- map.put(chave, valor) = adiciona um novo elemento chave-valor ou substitui um valor, caso a chave informada seja a mesma
+- map.containsKey(chave) = verifica se existe uma chave com o nome especificado; retorna true ou false
+- map.get(chave) = retorna o valor de determinada chave
+- map.keySet() = retorna um set com as chaves e seus respectivos valores; o set retornado possui o tipo da chave
+- map.values() = retorna uma collection do tipo dos valores e com todos os valores existentes
+- Collections.max(collection) = retorna o valor máximo da collection especificada, no caso a collection de valores
+- map.entrySet() = retorna um set com elementos do tipo entry; permite trabalhar com os elementos de forma separada
+
+
+## STREAM API
+
+- classe anônima: é uma classe que não possui nome e é declarada e instanciada em uma única instrução; usada sempre que existir a necessidade de instanciar uma classe apenas uma vez, quando a classe é pequena e possui uma função simples
+
+- functional interface: interface com um single abstract method e sua implementação pode ser tratada com expressões lambda. Ex: ActionListener (método actionPerformed), Comparator (método compare). Outros exemplos de interfaces funcionais: Consumer, Function e Predicate
+
+- expressões lambdas: função sem declaração (sem nome, tipo de retorno e modificador de acesso); método declarado no mesmo lugar em que é usado; sintaxe: (argumento) -> (corpo)
+
+- reference method: recurso que permite fazer referencia a um método ou construtor de uma classe funcional e assim indicar que deve ser utilizado em um ponto específico do código. Utilização: informar classe de referência seguida de "::"  + o nome do método sem os parênteses; forma de simplificar uma expressão lambda
+
+- stream API: opção de manipulação de coleções seguindo princípios da programação funcional; maneira simples e concisa de escrever códigos que permite facilidade de manutenção e paralelização
+
+source -> pipeline -> terminal
+
+- 2 tipos de operações: intermediárias e terminais; as intermediárias retornam stream e podem ser encadeadas; as terminais só permitem a utilização de uma e retornam ou um objeto ou um valor
+
+OBS: Stream não modifica a fonte
+
+- .forEach() = imprime todos os elementos 
+- .limit(qtd_numeros_desejados) = limita a collection na quantidade de números especificados
+- .collect(Collectors.toSet()) = cria um set com os valores coletados
+- .map = retorna a collection de acordo com a regra especificada
+- .filter() = filtra elementos de acordo com um predicado
+- .average() = retorna a média
+- .ifPresent() = realiza uma ação se o argumento existir
+
+

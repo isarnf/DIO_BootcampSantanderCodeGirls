@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DIO_BootcampSantanderCodeGirls.iml" filepath="$PROJECT_DIR$/.idea/DIO_BootcampSantanderCodeGirls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modulo_II/EstruturasRepeticaoEArrays/EstruturasRepeticaoEArrays.iml" filepath="$PROJECT_DIR$/Modulo_II/EstruturasRepeticaoEArrays/EstruturasRepeticaoEArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modulo_II/TrabalhandoCollections/TrabalhandoCollections.iml" filepath="$PROJECT_DIR$/Modulo_II/TrabalhandoCollections/TrabalhandoCollections.iml" />
+    </modules>
+  </component>
+</project>

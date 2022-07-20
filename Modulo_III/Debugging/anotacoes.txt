@@ -1,0 +1,21 @@
+## DEBUGGING = DEPURAÇÃO
+
+- tipos de erros: sintaxe (de linguagem) ou semântica (estrutura escrita de forma correta, mas resultado inconsistente com o esperado)
+
+- depuração permite o controle do tempo de execução de um programa para que ele seja executado linha a linha e o problema possa ser identificado; se inicia no método main e termina no main
+
+- pilha de execução: estrutura de dados que contém a invocação dos métodos
+
+- stack trace: rastreamento da pilha de busca até o local onde foi disparado a exceção; começa-se a ler de baixo para cima
+
+- Thread.dumpStack() = imprime a stack trace da thread que está acontecendo 
+
+- teste de mesa: teste simples que pode ser feito na mão
+
+- breakpoint: ponto de parada, onde acredita-se que o problema se encontra
+
+- step over: pular para a próxima linha
+- step into: entra dentro do método para analisar sua execução
+- step out: sair do método que está inspecionando
+- expression: permite simular o resultado de algumas expressões
+

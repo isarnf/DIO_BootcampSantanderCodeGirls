@@ -1,0 +1,83 @@
+# ORIENTAÇÃO A OBJETOS
+
+- paradigma estruturado = mais simplista; mais baixo nível; foca em operações (funções) e dados; menor abstração; focada no "como fazer?"
+
+- paradigma orientado a objeto = mais realista, melhor representação do mundo real; mais alto nível; foca na modelagem de entidades e suas interações; maior abstração; focada no "o que fazer?"
+
+- vantagens da POO: melhor coesão (unidades de código com responsabilidades bem definidas), melhor acoplamento (mais flexíveis), diminuição do gap semântico (diminuição da representação do mundo real), coletor de lixo (mecanismos que vão liberando espaço de memória automaticamente)
+
+## PILARES
+
+- abstração: capacidade de focar nas características essenciais (mais generalistas), que permitem o reúso 
+- reúso: capacidade de criar novas unidades de código a partir de outras já existentes
+- encapsulamento: capacidade de esconder complexidades e proteger dados
+
+## ESTRUTURA BÁSICA
+
+- classe: define métodos, atributos e estado de objetos; é um molde de objetos do mundo real com características semelhantes
+
+- atributo: define a estrutura de dados da classe; representa as características dos objetos criados por uma classe; diferente de variável (criadas dentro de métodos), as quais executam operações e não são tão estáveis 
+
+- método: é uma sub-rotina de uma classe; usado para definir quais ações a classe oferece; definir/realizar determinados comportamentos
+
+métodos especiais: 
+
+construtor: constroi objetos a partir de classes e permite passar parâmetros iniciais para atributos quando necessário
+destrutor: auxilia a destrução de um objeto; são chamados quando o coletor de lixo vai apagar os objetos para liberar recursos
+
+sobrecarga: mudar a assinatura de um método de acordo com a necessidade
+
+- objeto: é a representação de um conceito/entidade do mundo real; pode ser concreto ou abstrato; são instâncias de classes
+
+- mensagem: ativação de um método de um objeto ou de uma classe
+
+## HERANÇA
+
+- Herança: relacionamento entre superclasses/subclasses; subclasses reaproveitam atributos e métodos das superclasses e também podem definir seus próprios métodos; herança serve pra criar subtipos (tipos mais específicos); palavra que define herança: "extends"
+
+- Tipos de herança: 
+
+simples: classe filha possui somente uma classe mãe;
+múltipla: classe filha possui uma ou mais classes mães; (java e c# não possuem)
+
+
+- upcast: subir na hierarquia; transformar um subtipo em um tipo maior na hierarquia; sempre implícito
+
+- downcast: descer na hierarquia; transformar um tipo em um tipo menor na hierarquia; é explícito; não é recomendável utilizá-lo (deve ser evitado)
+
+
+## POLIMORFISMO
+
+- Polimorfismo: mesmo método sempre se comporta de formas diferentes de acordo com a especialização da entidade; geralmente usado com herança
+
+- sobrescrita: mesmo método (Ação) PODE se comportar diferente, mas não necessariamente se comporta
+
+## ASSOCIAÇÃO
+
+- classes e objetos interagem entre si para atingir seus objetivos; "pedem ajuda" a outros
+
+- Tipos: estrutural (composição e agregação) e comportamental (dependência)
+
+composição: com parte todo; a parte só existe com o todo; relação forte de dependência
+agregação: sem parte todo; uma parte pode existir sem o todo
+dependência: depende de; existe um método que depende de outra entidade
+
+- herança (mais rígida; uma coisa É a outra) x associação (mais flexível; uma coisa USA a outra)
+
+## INTERFACE
+
+- define um contrato que a classe a qual implementa deve obrigatoriamente seguir, se comprometendo a realizar todos os comportamentos que a interface disponibiliza; para implementar uma interface utiliza-se a palavra "implements"
+
+
+## ORGANIZAÇÃO
+
+- pacotes: organização física/lógica criada para separar classes com responsabilidades distintas
+
+- visibilidades: modificador de acesso; determina até que ponto uma classe, atributo ou método pode ser usado
+
+private: mais restritiva; só é visível dentro da própria classe
+protected: visível dentro da classe, no mesmo pacote e subclasses
+public: menos restritiva; visível em qualquer lugar da aplicação
+
+
+

@@ -1,0 +1,33 @@
+## TRATAMENTO DE EXCEÇÕES
+
+- exceção: evento que interrompe o fluxo normal de processamento de uma classe; se uma exceção for tratada, ele poderá continuar executando o que estava proposto; devemos incluir tratamento de exceções desdde o início do desenvolvimento
+
+- error: não pode ser tratado; indica um problema de recurso (por exemplo memória) e torna a execução do programa impossível de continuar; não é possível fazer um try/catch; eventos irrecuperáveis
+
+- Tipos de exceções:
+
+unchecked (runtime exception): podem ser evitadas se forem tratadas e analisadas pelo desenvolvedor, mas o tratamento não é obrigatório; relacionadas com a lógica
+
+checked: devem obrigatoriamente ser evitadas e tratadas pelo desenvolvedor para que o programa funcione; tratadas com "throw"; eventos recuperáveis; "throws" usada com exceptions; indica que um pedaço de código pode lançar uma exceção
+
+personalizadas: é uma classe criada pelo próprio desenvolvedor
+
+- hierarquia: 
+
+error e exception herdam de throwable
+runtime exception herda de exception
+
+- tratamento de unchecked exceptions: 
+try = bloco de código onde pode acontecer a exception
+catch = captura a exceção (ou exceções) que pode(m) ser disparada(s)
+finally = é opcional, sempre será executado independentemente se a exceção for disparada ou não
+
+- tratamento de checked exception: 
+lançar exception = adiciona exceção na assinatura do método usando a palavra throws, mas não trata exception
+try/catch
+
+- obs: quando definimos exceções dentro dos catch, colocamos as exceções mais específicas primeiro, e não as mais gerais, senão pode ser que o programa nunca capture as mais específicas
+
+OBS: JOptionPane.showInputDialog() = usado para criar uma janelinha de input de dados
+JOptionPane.showMessageDialog() = usado para mostrar uma mensagem na tela através de uma janela
+
