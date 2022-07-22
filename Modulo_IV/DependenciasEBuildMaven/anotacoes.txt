@@ -1,0 +1,82 @@
+# DEPENDÊNCIAS E BUILD COM MAVEN
+
+- Apache Maven: utilizado para o gerenciamento de build e dependências de projeto
+- Auxilia com empacotamento da aplicação, compilação e execução de testes
+- POM (Project Object Model): possui informações detalhadas referentes à aplicação, de como ela foi construída etc; é a unidade fundamental de trabalho do apache maven; possui formato XML;
+- site para download do Apache Maven: https://maven.apache.org/download.cgi
+- maven archetype: templates de projeto que facilitam a criação de projetos com configurações pré-definidas
+
+- comandos principais:
+
+mvn compile: compilar; todos os arquivos java são compilados para a pasta target
+mvn test: testar
+mvn package: empacotar; cria um arquivo jar da aplicação
+mvn clean: limpar diretório de trabalho (pasta target)
+
+- Digitar "maven archetype list" no google pode ajudar a buscar por templates (archetypes)
+- Site: mvn repository - possui diversos archetypes para construção de projetos
+
+- POM pode possuir informações tais como: nome do projeto, dependências, módulos, configurações de build, detalhes do projeto e configurações de ambiente, mas nem todas essas informações são obrigatórias. As informações obrigatórias são: modelVersion, groupId, artifactId e version
+
+- Maven trabalha com conceito de herança, que se estende para o POM. O POM estende do Super POM, o qual possui todas as configurações básicas. Caso o usuário não sobrescreva as propriedades essenciais do Super POM, estas serão utilizadas
+
+- Repositórios: locais que podem conter plugins e bibliotecas que o maven provê; 
+2 tipos: 
+
+remoto (repositório central utilizado pelo maven para buscar os artefatos; configurado automaticamente pelo super POM); pode ser configurado através do POM.xml pelo usuário ou através do arquivo settings.xml na máquina local
+mirror: pode inferir um repositorio remoto o qual pode ser utilizado globalmente pelo maven
+
+local: repositório semelhante ao remoto mas na própria máquina (estratégia de cache); fica localizado na pasta .m2/repository
+
+- Adicionando dependências: ir até o pom.xml -> tag <dependencies> -> adicionar propriedades que identificam unicamente o componente: groupId (id da organização), artifactId (nome do projeto em si) e version (versão) do componente -> mvn compile (no terminal)
+
+
+- Tipos de dependências: diretas e transitivas
+
+dependência direta: declaradas no pom.xml
+dependência transitiva: dependências obrigatórias das dependências declaradas no pom.xml
+
+- mvn install: publica localmente o componente, tornando-se uma dependência passível de uso, pois ele vai até o repositório local
+
+
+- Transitividade e escopos
+
+- problema das dependências transitivas: quando uma dependência carrega consigo outras dependências que não são do interesse do programador para aquele projeto, prejudicando em alguns aspectos como tamanho da aplicação etc
+
+- Classpath: referência que a aplicação possui para aquele momento de execução -> 
+runtime (tempo de execução), teste e compile 
+
+- existem 6 tipos de escopo que limitam a transitividade das dependências
+
+- escopo compile (default): disponível em todos os classpaths, transitivo
+- escopo provided: dependência fornecida em tempo de execução, adicionada no classpath para compilação e teste apenas, não é transitiva; declaração <scope> provided </scope>
+- escopo runtime: indica que a dependência é necessária para execução e não para compilação; maven inclui no classpath dos escopos de runtime e test
+- escopo test: somente para compilação e execução de testes; não é transitivo
+- escopo system: similar ao provided, diferindo apenas na necessidade de prover o JAR explicitamente; compilação e teste; não é transitiva
+- escopo import: disponível apenas com uma dependência do tipo pom e com tag <dependencyManagement>; permite reutilização de dependências de um outro projeto
+
+- ver classpath: mvn dependency:build-classpath -DincludeScope= CLASSPATH(compile, teste ou runtime)
+
+- dependências opcionais: não são necessárias em projetos que irão utilizar seu componente; <optional>
+
+- exclusions: usado quando um componente que você usa compartilha uma biblioteca que você já tem ou não quer ter disponível por incompatibilidade de versão, etc
+
+
+- Maven Build Lifecycle: 3 ciclos de vida de construção 
+
+default: ciclo principal, responsável pelo deploy local, 23 fases ou comando (principais: validate, compile, test-compile, teste, integration-test, package, install, deploy)
+clean: ciclo intermediário, responsável pela limpeza do projeto, 3 fases (pre-clean, clean, post-clean)
+site: ciclo final, responsável pela criação do site de documentação do projeto, 4 fases (pre-site, site, post-site, site-deploy)
+
+
+- Plugins: a arquitetura por trás do maven utiliza plugins, ou seja, são a estrutura central; extensibilidade - é possível customizar os plugins de acordo com a necessidade; são disponibilizados como JARs
+
+- Plugins maven mais utilizados: eclipse, jacoco, ear, war, compile, clean, checkstyle, javadoc; mvn [plugin-name]:[goal-name]; plugins contém um ou mais goals (tarefas) que podem ser selecionados  
+
+- configuração de plugin: fica dentro da parte de build e varia de acordo com o plugin
+
+- maven javadoc plugin = cria uma documentação do projeto que pode ser compartilhada 
+
+
+
+

@@ -1,0 +1,64 @@
+# SPRING FRAMEWORK
+
+- Data Access/Integration + Web + Core Container + outros
+
+## CORE CONTAINER
+
+- Core Container composto por: Beans, Core, Context, Expression Language 
+
+Core e Beans: núcleo principal do sistema, estrutura principal, IoC (Inversão de Controles), Injeção de Dependências, Bean Factory (padrão de criação de fábrica de objetos em tempo de execução)
+Context: interface ApplicationContext estende e melhora a bean factory, suporte à internacionalização
+Expression Language: define valores e comportamentos através de xml ou anotações em tempo de execução
+
+- IoC: sequência de chamada de métodos é invertida (não determinada pelo programador); o próprio spring que sabe o que e quando deve ser instanciado; o programador se preocupa apenas com a regra de negócio
+
+- Interface Application Context: representa o Spring IoC; ela que configura e instancia as beans
+
+- Configuração de beans: 
+xml: método mais manual; precisa configurar cada classe/objeto um por um
+código java: método intermediário
+anotações java: método mais fácil de configuração; @Component, @Controller, @Service, @Repository, @Autowired -> anotações que indicam o que o Spring deve fazer
+
+## BEANS
+
+- É qualquer classe/objeto gerenciado pelo Spring IoC (Inversão de Controles), ou seja, todas as classes que possuem anotações que são gerenciadas pelo Spring; possui anotação @bean
+
+- stereotypes: são anotações do spring
+@Repository = representa qualquer interação que ocorra com o banco de dados (persistência)
+JpaRepository: configura a parte do banco de dados
+@Service = usada para classes que contenham a lógica e está relacionada com regras de negócio/serviço
+@Controller/@RestController = classes que representam o controller, que gerencia telas/apresentação; RestController retorna dados em JSON
+@Configuration = classes relacionadas com a configuração, como segurança, etc
+@Component = classes auxiliares genéricas que não se encaixam nas outras; todas as outras derivam
+
+## BEANS SCOPES 
+
+- Singleton (padrão) = uma única instância para qualquer chamada de qualquer lugar do projeto; @scope("")
+- Prototype = oposto do singleton; para cada requisição nova, instancia um objeto novo @scope("")
+- Request = faz uma instância para cada requisição http; o ciclo de vida dura somente durante a requisição; assim que a requisição termina, a bean é destruída; @RequestScope
+- Session =  mistura do singleton com request scope; cria uma requesição única mas para o tempo de cada sessão; assim que a sessão terminar, o spring utiliza uma bean nova @SessionScope
+- Application = parecido com o singleton e o session, mas com diferença que faz uma instância para todas as aplicações juntas; @scope("")
+- WebSocket = funciona somente para websocket; se a conexão websocket for perdida, uma bean nova é utilizada; @scope("")
+
+## INJEÇÃO DE DEPENDÊNCIAS
+
+- É uma forma de aplicar inversão de controle em uma classe que utiliza funcionalidades de outras classes; "cascata" de chamadas e retornos
+
+## PROXIES SETTER
+
+- Modo com que o Spring busca e injeta as dependências
+- Autowired = marca um ponto de injeção em:
+Propriedades (Atributos)
+Construtores
+Métodos 
+
+## CDI
+
+- Injeção de dependência e Contexto = define injeção de dependência e inversão de controle para aplicações JavaEE
+- @Named
+
+
+
+
+
+

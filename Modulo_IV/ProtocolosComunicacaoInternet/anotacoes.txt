@@ -1,0 +1,79 @@
+# PRINCIPAIS PROTOCOLOS DE COMUNICAÇÃO DA INTERNET
+
+- Protocolo HTTP (HyperText Transfer Protocol): determina como ocorre a comunicação entre cliente (solicita recursos geralmente via browser - Request) e servidor (hospeda os recursos - Response)
+
+- Arquitetura cliente-servidor: servidor não possui estado do cliente (stateless), não detecta redundância
+
+- Mensagens HTTP: request & response; 
+método GET usado quando algum conteúdo é solicitado ao servidor;
+método POST usando quando algo é enviado ao servidor (por exemplo um formulário);
+
+- HTTP Entity Body: conteúdo que é enviado geralmente é através de formato XML ou JSON para armazenamento, transmissão, recuperação
+
+- Objetivo do XML e JSON: 
+serialização: processo de transformação dos dados para a comunicação entre as partes
+
+- Além do conteúdo, dentro do xml também existe os metadados
+- JSON é lightweight, ou seja, é mais legível, mais simples e possui estrutura de dicionário
+
+- semelhancas do XML e JSON: são autodescritivos, hierárquicos, independente de linguagem de programação e de vasta utilização
+- diferenças do XML e JSON: 
+XML - tags, mais complexo
+JSON - dicionário, sucinto, permite a utilização de vetores
+
+- qual formato utilizar? depende de: tecnologia, aplicações leves, complexidade, metadados
+
+- TCP: Transmission Control Protocol -> comunicação persistente (mantém a comunicação ativa) e não-persistente (vai encerrar a comunicação quando receber a resposta)
+
+
+## REQUEST E RESPONSE
+
+- get é mais utilizado do que o post
+- outros métodos: head, put, delete, trace, option, patch, connect etc
+- métodos seguros (get, post, option): não modificam o estado do servidor; idempotentes
+- http response: status line (versão do protocolo e status code), header line, entity body
+status code:
+100-199 - information response
+200-299 - successful
+300-399 - redirection
+400-499 - client error
+500-599 - server error response
+
+- webdav (web distributed authoring and versioning)
+
+- Cookies: rastreiam as informações do cliente pelo servidor; estão no dispositivo do cliente; 2 tipos - sessão (são mantidos apenas durante a sessão) e persistentes (são mantidos por meses ou até anos)
+
+- web caching (proxy server): é um intermediário entre o servidor e o cliente; informações do cliente só são enviadas novamente caso as informações não estejam mais atualizadas 
+
+- Pros http 2.0: única conexão persistente; priorizacao de recursos utilizando pesos; reutilização de header; server push; https por padrão; negociação no handshake
+- Contras http 2.0: lentidão, load balancer, push configuração incorreta
+
+- Principais servidores: apache, nginx, xampp (usado principalmente para teste)
+- Wireshark: usado para conferir a comunicação
+
+
+## HTTPS
+
+- criptografia por chave:
+assimétrica: chave privada e chave pública; 
+simétrica: chave única privada; 
+
+- protocolo SSL (Secure Socket Layer): aumenta a segurança permitindo a autenticidade, confiabilidade e garantindo o acesso das informações apenas ao usuário destinado
+
+- operações do SSL: handshake, key derivation, data transfer
+
+## WEBSOCKET
+
+- implementa via API uma conexão bidirecional
+- roda encapsulado no http
+- voltadas para aplicações de tempo real
+- opera 2 fases: handshake e data transfer
+
+
+
+
+
+
+
+
+
